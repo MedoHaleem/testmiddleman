@@ -1,4 +1,7 @@
 [build]
   base = "website"
 
-/checkout/* /checkout/index.html 404
+[[redirects]]
+  from = "/checkout/*"
+  to = "/checkout/index.html"
+  status = 404
