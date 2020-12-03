@@ -1,6 +1,6 @@
 const path = require("path");
 module.exports = {
-  publicPath: './checkout',
+  publicPath: './',
   outputDir: path.resolve(__dirname, "../website/build/checkout"),
   devServer: {
     disableHostCheck: true,
