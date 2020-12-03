@@ -2,8 +2,10 @@
   base = "website"
 
 [[redirects]]
-    from = "/checkout/*"
-    to = "/checkout/index.html"
-    status = 404
-    force = true
-    query = {path = ":path"}
+  from = "/*"
+  to = "checkout/index.html"
+  status = 404
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
