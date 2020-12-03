@@ -1,0 +1,14 @@
+/- content_for(:head)
+/  == dato_meta_tags(page)
+section
+  .wrap
+  br
+    - dato.products.each do |product|
+      .product_card
+        h1 =product.title
+        p.price = "Price from Dato $#{product.price}"
+        p = lorem.sentence
+        p
+        =button_to "View Product", "http://localhost:4567/products/#{product.slug}"
+
+        
