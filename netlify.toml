@@ -4,7 +4,7 @@
 [[redirects]]
   from = "products/checkout/*"
   to = "checkout/index.html"
-  status = 301
+  status = 200
 [[headers]]
   for = "/*"
     [headers.values]
