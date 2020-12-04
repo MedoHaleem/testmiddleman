@@ -21,7 +21,7 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/:order_id',
       component: Layout,
       props: true,
       beforeEnter (routeTo, routeFrom, next) {
@@ -34,7 +34,7 @@ const router = new Router({
         }
 
         store
-          .dispatch('setOrder', routeTo.query.order_id)
+          .dispatch('setOrder', routeTo.params.order_id)
           .then(order => {
             i18n.locale = _.lowerCase(order.language_code)
             if (store.state.auth.has_customer) {
