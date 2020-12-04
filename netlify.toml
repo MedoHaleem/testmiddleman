@@ -2,7 +2,7 @@
   base = "website"
 
 [[redirects]]
-  from = "checkout/*"
+  from = "/*"
   to = "checkout/index.html"
   status = 404
 [[headers]]
