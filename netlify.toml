@@ -3,7 +3,7 @@
 
 [[redirects]]
   from = "/*"
-  to = "checkout/index.html"
+  to = "checkout/index.html#order_id"
   status = 200
 [[headers]]
   for = "/*"
