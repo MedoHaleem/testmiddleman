@@ -1,7 +1,10 @@
 [build]
   base = "website"
 
-
+[[redirects]]
+  from = "checkout/*"
+  to = "checkout/index.html"
+  status = 200
 [[headers]]
   for = "/*"
     [headers.values]
