@@ -21,10 +21,11 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/:order_id',
+      path: '/',
       component: Layout,
       props: true,
       beforeEnter (routeTo, routeFrom, next) {
+        console.log(routeTo.query)
         if (routeTo.query.access_token) {
           store.commit('updateAuthAccessToken', routeTo.query.access_token)
         }
@@ -33,7 +34,7 @@ const router = new Router({
         }
 
         store
-          .dispatch('setOrder', routeTo.params.order_id)
+          .dispatch('setOrder', routeTo.query.order_id)
           .then(order => {
             i18n.locale = _.lowerCase(order.language_code)
             if (store.state.auth.has_customer) {
