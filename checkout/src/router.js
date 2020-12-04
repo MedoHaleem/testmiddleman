@@ -25,7 +25,7 @@ const router = new Router({
       component: Layout,
       props: true,
       beforeEnter (routeTo, routeFrom, next) {
-        console.log(routeTo.query)
+        alert(routeTo.params.order_id)
         if (routeTo.query.access_token) {
           store.commit('updateAuthAccessToken', routeTo.query.access_token)
         }
