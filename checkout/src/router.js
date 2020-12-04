@@ -26,7 +26,7 @@ const router = new Router({
       props: true,
       beforeEnter (routeTo, routeFrom, next) {
         alert(routeTo.params.order_id)
-        alert(routeTo.query.access_token)
+        alert(process.env.VUE_APP_API_BASE_URL)
         if (routeTo.query.access_token) {
           store.commit('updateAuthAccessToken', routeTo.query.access_token)
         }
