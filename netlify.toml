@@ -2,8 +2,8 @@
   base = "website"
 
 [[redirects]]
-  from = "/*"
-  to = "checkout/index.html#order_id"
+  from = "checkout/*"
+  to = "checkout/index.html"
   status = 200
 [[headers]]
   for = "/*"
